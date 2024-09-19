@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Zen Hub</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+            /* Smooth scrolling */
+        }
+
+        .navbar {
+            transition: background-color 0.3s;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero {
+            background: url('background.jpg') no-repeat center center/cover;
+            height: 50vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            /* Dark overlay */
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            /* Ensure text is above the overlay */
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-custom {
+            background-color: #6cbf6c;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            /* Make sure it's positioned correctly */
+            z-index: 10;
+            /* Ensure it’s on top */
+        }
+
+        .btn-custom:hover {
+            background-color: #5a9f5a;
+            transform: scale(1.05);
+            /* Scale effect on hover */
+        }
+
+        .benefit-icon {
+            font-size: 1.5rem;
+            color: #6cbf6c;
+            margin-right: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .py-5 {
+            padding: 50px 20px;
+        }
+
+        footer {
+            background-color: #f7f7f7;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #6cbf6c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #5a9f5a;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .faq {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .faq h4 {
+            cursor: pointer;
+            color: #6cbf6c;
+        }
+
+        .faq-content {
+            display: none;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .community {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Zen Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#assessment">Assessment</a></li>
+                <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="bg-light py-4" style="margin-top: 70px;">
+        <div class="container text-center">
+            <h1 class="display-4">The Ultimate Zen Hub</h1>
+            <p class="lead">Discover Your Path to Mindfulness</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Assess Your Well-Being</h1>
+            <p>Take a moment to understand your stress levels and mood patterns.</p>
+            <a href="#assessment" class="btn btn-custom">Start Your Assessment</a>
+        </div>
+    </section>
+
+    <section class="container py-5" id="assessment">
+        <h2 class="text-success">About the Assessment</h2>
+        <p>Our personalized wellness assessment helps you identify your current stress levels and mood patterns. Gain
+            insights into your well-being and discover areas for improvement.</p>
+        <h3>What to Expect</h3>
+        <p>The assessment consists of a series of simple questions designed to gauge your emotional and mental
+            well-being.</p>
+        <ul>
+            <li>How often do you feel stressed during the week?</li>
+            <li>On a scale of 1-10, how would you rate your overall mood today?</li>
+        </ul>
+        <a href="#" class="btn btn-custom">Begin Your Wellness Assessment</a>
+    </section>
+
+    <section class="container py-5" id="benefits">
+        <h2 class="text-success">Why Take This Assessment?</h2>
+        <ul class="list-unstyled">
+            <li><span class="benefit-icon">✅</span> Understand your stress triggers.</li>
+            <li><span class="benefit-icon">✅</span> Track mood patterns over time.</li>
+            <li><span class="benefit-icon">✅</span> Receive tailored recommendations for improvement.</li>
+        </ul>
+    </section>
+
+    <section class="container py-5" id="testimonials">
+        <h2 class="text-success">What Our Users Say</h2>
+        <div class="testimonial">
+            <p><strong>Karamveer:</strong> "This assessment helped me understand my stress and provided valuable insights
+                into my well-being."</p>
+        </div>
+        <div class="testimonial">
+            <p><strong>Shubhika:</strong> "A wonderful tool! I’ve been able to track my mood and make positive
+                changes."</p>
+        </div>
+    </section>
+
+    <section class="container py-5" id="community">
+        <h2 class="text-success">Join Our Community</h2>
+        <p>At The Ultimate Zen Hub, we believe in the power of connection. Join our community to share experiences,
+            support one another, and grow together in mindfulness.</p>
+        <div class="community">
+            <h4>Share Your Story</h4>
+            <p>Have you experienced a breakthrough in your wellness journey? Share your story with us, and inspire
+                others in the community.</p>
+            <textarea class="form-control" rows="3" placeholder="Write your story here..."></textarea>
+            <button class="btn btn-custom mt-2">Submit</button>
+        </div>
+        <div class="community">
+            <h4>Tips for Mindfulness</h4>
+            <ul>
+                <li>Practice deep breathing for 5 minutes each day.</li>
+                <li>Take a mindful walk in nature and observe your surroundings.</li>
+                <li>Set aside time each week for self-care activities.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container py-5" id="faq">
+        <h2 class="text-success">Frequently Asked Questions</h2>
+        <div class="faq">
+            <h4 onclick="toggleFAQ(this)">How long does the assessment take?</h4>
+            <div class="faq-content">
+                <p>The assessment typically takes about 10 minutes to complete.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <h4 onclick="toggleFAQ(this)">Is my data safe?</h4>
+            <div class="faq-content">
+                <p>Yes, we prioritize your privacy and data security. Your information is confidential.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>© 2024 The Ultimate Zen Hub | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>Follow us on:
+                <a href="#">Facebook</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">Twitter</a>
+            </p>
+            <form class="form-inline justify-content-center mt-3">
+                <input class="form-control mr-2" type="email" placeholder="Subscribe for tips" aria-label="Email">
+                <button class="btn btn-custom" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        // Change navbar background on scroll
+        window.onscroll = function () {
+            const navbar = document.querySelector('.navbar');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        };
+    </script>
+</body>
+
+</html>
